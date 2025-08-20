@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <main>
+        <div class="Menu">
+            <div class="navbar">
+                 <nav class="navbar">
+                        <div class="navbar-container container">
+                        <input type="checkbox" name="" id="">
+                    <div class="hamburger-lines">
+                       <span class="line line1"></span>
+                       <span class="line line2"></span>
+                       <span class="line line3"></span>
+                    </div>
+                   <ul class="menu-items">
+                      <li><a href="#about">Home</a></li>
+                      <li><a href="https://github.com/jagetheprogrammer">Github</a></li>
+                      <li><a href="https://tiktok.com/@jaakkohub">Tiktok</a></li>
+                      <li><a href="https://youtube.com/@jaakkogt">Youtube</a></li>
+                      <li><a href="https://dsc.gg/jaakkoHUB">Discord</a></li>
+                    </ul>
+                      <h1 class="logo"><a href="#home">Jaakko Maatiala</a></h1>
+                    </div>
+                  </nav>
+            </div>
+
+
+            <div class="about">
+                <h1>About Me</h1>
+                <p>Hi, I'm Jaakko Maatiala, a 16-year-old developer from Finland. I specialize in creating Discord bots and web applications. My passion lies in coding and I enjoy sharing my knowledge with others.</p>
+                <p>Feel free to explore my projects on GitHub or connect with me on social media!</p>
+            </div>
+
+
+            <div class="links">
+                <h2>My links</h2>
+                <ul>
+                    <li><a href="https://github.com/jagetheprogrammer">GitHub</a></li>
+                    <li><a href="https://tiktok.com/@jaakkohub">TikTok</a></li>
+                    <li><a href="https://youtube.com/@jaakkogt">YouTube</a></li>
+                    <li><a href="https://dsc.gg/jaakkoHUB">Discord</a></li>
+                </ul>
+            </div>
+    
+            <div class="logs">
+                 <h1>Full access</h1>
+                   <p>(under developement)</p>
+                   <p>You have to be signed in to access full page!</p>
+                  <a href="/login"><button>Login</button></a>
+                  <a href="/register"><button>Register</button></a>
+            </div>
+
+
+
+            <div class="more-info">
+                <h1>More Information</h1>
+                <p>If you have any questions or need assistance, feel free to reach out to me via WhatsApp at +358 452342740.</p>
+            </div>
+
+           
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Jaakko Maatiala. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+    emailjs.init("sTaTI9oTOS8LcGpfN"); // Get this from EmailJS dashboard
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        emailjs.sendForm("service_zu42lim", "template_pxb15o1", this)
+        .then(() => {
+            alert("Message sent successfully!");
+            this.reset();
+        }, (err) => {
+            alert("Failed to send message: " + JSON.stringify(err));
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="../es.css">
+<div class="kirjaudu">
+<h1>Login To Full Access</h1>
+
+<% if (typeof successMessage !== 'undefined') { %>
+    <div class="success"><%= successMessage %></div>
+<% } %>
+<% if (typeof errorUser !== 'undefined') { %>
+    <div class="error"><%= errorUser %></div>
+<% } %>
+<% if (typeof errorPassword !== 'undefined') { %>
+    <div class="error"><%= errorPassword %></div>
+<% } %>
+<% if (typeof errorGeneral !== 'undefined') { %>
+    <div class="error"><%= errorGeneral %></div>
+<% } %>
+
+
+<form action="/login" method="POST">
+        <input type="text" name="username"
+                placeholder="username">
+        <input type="password" name="password" 
+                placeholder="password">
+        <button>login</button>
+</form>
+
+<li><a href="/register">Sign up!!</a></li>
+</div>

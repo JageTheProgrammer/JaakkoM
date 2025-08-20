@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="../es.css">
+
+<div class="kirjaudu">
+
+
+<h1> Sign up form
+    TO GRANT FULL ACCESS </h1>
+
+
+    <!-- Example for register.ejs -->
+<% if (typeof errorExists !== 'undefined') { %>
+    <div class="error"><%= errorExists %></div>
+<% } %>
+<% if (typeof errorPassword !== 'undefined') { %>
+    <div class="error"><%= errorPassword %></div>
+<% } %>
+<% if (typeof errorGeneral !== 'undefined') { %>
+    <div class="error"><%= errorGeneral %></div>
+<% } %>
+<% if (typeof successMessage !== 'undefined') { %>
+    <div class="success"><%= successMessage %></div>
+<% } %>
+
+<form action="/register" method="POST">
+    <input type="text" name="username" 
+        placeholder="username">
+    <input type="password" name="password" 
+        placeholder="password">
+    <button>Submit</button>
+</form>
+
+
+<li><a href="/login">Login</a></li>
+</div>
